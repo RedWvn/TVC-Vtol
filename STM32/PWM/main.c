@@ -240,8 +240,8 @@ void Timer2_Init(void)
 
 	tim2.Instance = TIM2;
 	tim2.Init.CounterMode = TIM_COUNTERMODE_UP; // set as up counter
-	tim2.Init.Period = 3000 - 1; // for one milli second
-	tim2.Init.Prescaler = 50 - 1;//49;
+	tim2.Init.Period = (3000 - 1); // for 300 milli seconds
+	tim2.Init.Prescaler = (50 - 1);//49;
 	if(HAL_TIM_PWM_Init(&tim2) != HAL_OK) Error_Handler();  //Timer 2 is configured
 
 	memset(&timerPWMconfig1, 0 , sizeof(timerPWMconfig1));
